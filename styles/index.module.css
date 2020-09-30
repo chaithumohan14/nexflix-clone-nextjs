@@ -28,3 +28,88 @@
   font-size: 30px;
   font-weight: 400;
 }
+
+.signup__form {
+  display: flex;
+  width: 50%;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.get__started__field {
+  height: 60px;
+  width: 80%;
+  position: relative;
+  margin: 40px auto;
+  border-radius: 4px;
+  background-color: white;
+  overflow: hidden;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.get__started__field input {
+  position: absolute;
+  border: none;
+  outline: none;
+  top: 15px;
+  left: 0;
+  width: 80%;
+  height: 40px;
+  font-family: "Roboto", sans-serif;
+  border-radius: inherit;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.get__started__field input::placeholder {
+  color: transparent;
+}
+
+.get__started__field input:focus,
+.get__started__field input:valid,
+.get__started__field input:invalid {
+  box-shadow: none;
+}
+
+.get__started__field label {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: black;
+}
+
+.get__started__field label span,
+.get__started__field input:focus + label span {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  font-size: 13px;
+  color: #444;
+  transition: all 0.35s ease-in;
+}
+
+.get__started__field input:placeholder-shown + label span {
+  top: 20px;
+  font-size: 18px;
+  color: #444;
+}
+
+.btn {
+  background-color: #e50914;
+  outline: none;
+  border: none;
+  padding: 20px;
+  font-size: 20px;
+  color: white;
+  width: 200px;
+  height: 60px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}

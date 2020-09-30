@@ -17,6 +17,20 @@ function index() {
             Ready to watch? Enter your email to create or restart your
             membership.
           </div>
+          <div className={`${styles.signup__form}`}>
+            <div className={`${styles.get__started__field}`}>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email Address"
+              />
+              <label htmlFor="email">
+                <span>Email</span>
+              </label>
+            </div>
+            <button className={`${styles.btn}`}>GET STARTED &gt;</button>
+          </div>
         </div>
       </div>
     </Page>
