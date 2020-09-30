@@ -1,10 +1,5 @@
 function Page({ children }) {
-  return (
-    <div>
-      Page
-      {children}
-    </div>
-  );
+  return <div>{children}</div>;
 }
 
 export default Page;

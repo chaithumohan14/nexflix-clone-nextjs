@@ -1,0 +1,11 @@
+.navbar {
+  height: 50px;
+  width: 100%;
+  background: transparent;
+  padding: 30px;
+}
+
+.brand__logo {
+  width: 130px;
+  background: transparent;
+}
