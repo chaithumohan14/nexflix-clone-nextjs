@@ -1,11 +1,27 @@
 .navbar {
   height: 50px;
-  width: 100%;
+  width: 95%;
   background: transparent;
-  padding: 30px;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .brand__logo {
   width: 130px;
   background: transparent;
+}
+
+.btn {
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  background-color: #e50914;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
 }

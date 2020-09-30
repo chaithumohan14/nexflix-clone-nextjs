@@ -2,8 +2,8 @@ import styles from "../../styles/navbar.module.css";
 
 function Navbar() {
   return (
-    <nav>
-      <div className={`${styles.navbar}`}>
+    <nav className={`${styles.navbar}`}>
+      <div>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
           alt=""
@@ -11,6 +11,7 @@ function Navbar() {
           srcSet=""
         />
       </div>
+      <button class={`${styles.btn}`}>Sign Up</button>
     </nav>
   );
 }

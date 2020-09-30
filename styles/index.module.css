@@ -31,7 +31,7 @@
 
 .signup__form {
   display: flex;
-  width: 50%;
+  width: 55%;
   background: transparent;
   align-items: center;
   justify-content: center;
@@ -92,11 +92,11 @@
   left: 10px;
   font-size: 13px;
   color: #444;
-  transition: all 0.35s ease-in;
+  transition: all 0.15s ease-in;
 }
 
 .get__started__field input:placeholder-shown + label span {
-  top: 20px;
+  top: 25px;
   font-size: 18px;
   color: #444;
 }
@@ -112,4 +112,5 @@
   height: 60px;
   font-weight: 600;
   font-family: "Roboto", sans-serif;
+  cursor: pointer;
 }
