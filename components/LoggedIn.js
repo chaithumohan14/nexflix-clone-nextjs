@@ -15,8 +15,7 @@ function LoggedIn() {
   };
   return (
     <div style={{ color: "white" }}>
-      {" "}
-      <Navbar withButton />{" "}
+      <Navbar withButton /> Jello Wrols
     </div>
   );
 }
