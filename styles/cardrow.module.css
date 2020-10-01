@@ -1,5 +1,5 @@
 .cardRow {
-  width: 97%;
+  width: 90%;
   overflow-y: hidden;
   overflow-x: scroll;
   display: flex;
@@ -10,6 +10,7 @@
   scrollbar-width: 0px;
   -ms-overflow-style: none;
   scroll-snap-align: start;
+  padding: 0 30px;
 }
 
 .cardRow::-webkit-scrollbar {

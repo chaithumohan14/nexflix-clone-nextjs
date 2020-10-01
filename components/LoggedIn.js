@@ -18,28 +18,34 @@ function LoggedIn() {
     documenatary: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
   };
 
-  const [data, setData] = useState({});
+  const [originals, setOriginals] = useState([]);
+  const [trending, setTrending] = useState([]);
+  const [topRated, setTopRated] = useState([]);
+  const [action, setAction] = useState([]);
+  const [comedy, setComedy] = useState([]);
+  const [horror, setHorror] = useState([]);
+  const [romance, setRomance] = useState([]);
+  const [documentary, setDocumentary] = useState([]);
 
   useEffect(() => {
-    const tmpData = {};
-    const getData = async (url) => {
-      let res = [];
+    const getData = async (url, func) => {
+      const resp = null;
       await fetch(`${URL}${url}`)
         .then((res) => res.json())
-        .then((data) => {
-          res = data.results;
-        })
-        .catch((err) => {
-          console.log(err.message);
-          res = null;
-        });
-      return res;
+        .then((data) => func(data.results))
+        .catch((err) => console.log(err.message));
+      console.log("resp", resp);
+      return resp;
     };
-    Object.keys(suffixes).forEach(async (suffix) => {
-      console.log(suffix);
-      tmpData[suffix] = await getData(suffixes[suffix]);
-      setData(tmpData);
-    });
+    console.log();
+    getData(suffixes.originals, setOriginals);
+    getData(suffixes.trending, setTrending);
+    getData(suffixes.topRated, setTopRated);
+    getData(suffixes.actionMovies, setAction);
+    getData(suffixes.comedyMovies, setComedy);
+    getData(suffixes.horrorMovies, setHorror);
+    getData(suffixes.romanceMovies, setRomance);
+    getData(suffixes.documenatary, setDocumentary);
   }, []);
 
   return (
@@ -57,9 +63,17 @@ function LoggedIn() {
           murderous...
         </div>
       </div>
-      {Object.keys(data).map((key) => {
+      {/* {Object.keys(data).map((key) => {
         return <CardRow key={key} title={key} datas={data[key]} />;
-      })}
+      })} */}
+      <CardRow key={"Originals"} title={"Originals"} datas={originals} />
+      <CardRow key={"Trending"} title={"Trending"} datas={trending} />
+      <CardRow key={"topRated"} title={"top Rated"} datas={topRated} />
+      <CardRow key={"action"} title={"action"} datas={action} />
+      <CardRow key={"comedy"} title={"comedy"} datas={comedy} />
+      <CardRow key={"horror"} title={"horror"} datas={horror} />
+      <CardRow key={"romance"} title={"romance"} datas={romance} />
+      <CardRow key={"documentary"} title={"documentary"} datas={documentary} />
     </Page>
   );
 }
