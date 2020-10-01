@@ -1,18 +1,15 @@
 import { Store } from "../_context";
-import { auth } from "../_firebase";
+import LoggedIn from "../components/LoggedIn";
 import NoLogin from "./../components/NoLogin";
+import Page from "./../components/Page";
+
 function index() {
   const [store] = Store();
-  return store.user ? (
-    <div style={{ color: "white" }}>Logged In</div>
-  ) : (
-    <NoLogin />
+  return(
+  <Page>
+    {store.user ? <LoggedIn /> : <NoLogin />}
+  </Page>
   );
 }
-
-export const getServerSideProps = async (context) => {
-  console.log("Server Side", auth);
-  return { props: {} };
-};
 
 export default index;

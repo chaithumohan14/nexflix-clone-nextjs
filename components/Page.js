@@ -6,7 +6,6 @@ function Page({ children }) {
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
-        console.log("From Page auth user is " + auth.currentUser.email);
         let user = {
           email: auth.currentUser.email,
           displayName: auth.currentUser.displayName,

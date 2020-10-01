@@ -1,11 +1,9 @@
 import { Store } from "../../_context";
 import { auth } from "../../_firebase";
 import styles from "../../styles/navbar.module.css";
-import { useRouter } from "next/router";
 import Link from "next/link";
 
 function Navbar({ withButton = false }) {
-  const router = useRouter();
   const [store, dispatch] = Store();
   return (
     <nav className={`${styles.navbar}`}>
@@ -19,14 +17,9 @@ function Navbar({ withButton = false }) {
       </Link>
       {withButton &&
         (!store.user ? (
-          <button
-            onClick={(e) => {
-              router.push("/login");
-            }}
-            className={`${styles.btn}`}
-          >
-            Sign Up
-          </button>
+          <Link href="/login">
+            <button className={`${styles.btn}`}>Sign Up</button>
+          </Link>
         ) : (
           <button
             onClick={(e) => {
