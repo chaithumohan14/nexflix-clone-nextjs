@@ -1,0 +1,32 @@
+.cardRow {
+  width: 97%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 40px auto;
+  margin-top: 10px;
+  scrollbar-width: 0px;
+  -ms-overflow-style: none;
+  scroll-snap-align: start;
+}
+
+.cardRow::-webkit-scrollbar {
+  display: none;
+}
+
+.title {
+  color: white;
+  font-size: 26px;
+  align-self: start;
+  text-transform: capitalize;
+  margin: 10px 20px;
+  margin-top: 30px;
+}
+
+.img {
+  height: 300px;
+  margin: 0 20px;
+  object-fit: cover;
+}

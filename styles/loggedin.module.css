@@ -1,0 +1,42 @@
+.hero__page {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-image: url("https://image.tmdb.org/t/p/original/3kT4KvseaDOz3AbVZv1dIvpxEO3.jpg");
+}
+
+.movie__title,
+.movie__subtitle {
+  color: white;
+}
+
+.movie__title {
+  margin-top: 20vh;
+  font-size: 30px;
+  margin-left: 40px;
+}
+
+.movie__subtitle {
+  margin-top: 10px;
+  font-size: 18px;
+  margin-left: 40px;
+  max-width: 360px;
+}
+
+.button_container {
+  display: flex;
+  width: 200px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 40px;
+}
+
+.btn {
+  background: #21332e;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+}
