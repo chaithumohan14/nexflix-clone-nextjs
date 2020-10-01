@@ -1,0 +1,155 @@
+.signup__page {
+  height: 120vh;
+  width: 100%;
+  background: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.alert {
+  background-color: #ee291bcc;
+  color: white;
+  width: 80%;
+  padding: 10px 20px;
+  text-align: center;
+  margin: 50px auto;
+  display: none;
+}
+
+.showAlert {
+  display: block;
+}
+
+.border {
+  width: 50%;
+  border-radius: 3px;
+  margin: 10vh auto;
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: left;
+  width: 95%;
+  margin: 20px auto;
+}
+
+.subtitle {
+  text-align: left;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.display__email {
+  color: black;
+  font-size: 16px;
+  text-align: left;
+  margin: 20px auto;
+  width: 95%;
+}
+
+.display__email div:nth-child(2) {
+  font-weight: 700;
+}
+
+.input__field {
+  background-color: white;
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  position: relative;
+  width: 95%;
+  height: 55px;
+  margin: 30px auto;
+  overflow: hidden;
+  text-align: left;
+}
+
+.input__field input {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  border: none;
+  outline: none;
+  height: 20px;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  background: transparent;
+  color: #222;
+  padding-left: 10px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.input__field input::placeholder {
+  color: transparent;
+}
+
+.input__field label {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.input__field label span {
+  position: absolute;
+  top: 5px;
+  font-size: 14px;
+  left: 10px;
+  transition: all 0.05s ease-in;
+  color: rgb(31, 29, 29);
+}
+
+.input__field input:placeholder-shown + label span {
+  top: 25px;
+  font-size: 16px;
+  color: rgb(31, 29, 29);
+}
+
+.input__field input:focus,
+.input__field input:valid,
+.input__field input:invalid {
+  box-shadow: none;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: #e50914;
+  padding: 10px 20px;
+  width: 400px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  border-radius: 2px;
+  height: 60px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 991.98px) {
+  .border {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .border {
+    width: 70%;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .border {
+    width: 90%;
+    border: none;
+  }
+  .title {
+    font-size: 25px;
+  }
+  .title {
+    font-size: 20px;
+  }
+}

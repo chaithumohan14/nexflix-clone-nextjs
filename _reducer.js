@@ -1,6 +1,6 @@
 export const initialState = {
   user: null,
-  signupform: { email: null, password: null },
+  signupform: { email: null, password: "" },
 };
 
 export const reducer = (state, action) => {
@@ -20,8 +20,8 @@ export const reducer = (state, action) => {
     case "SET_SIGNUP_EMAIL":
       return {
         ...state,
-        user: {
-          ...state.user,
+        signupform: {
+          ...state.signupform,
           email: action.email,
         },
       };
@@ -29,8 +29,8 @@ export const reducer = (state, action) => {
     case "SET_SIGNUP_PASSWORD":
       return {
         ...state,
-        user: {
-          ...state.user,
+        signupform: {
+          ...state.signupform,
           password: action.password,
         },
       };
@@ -38,5 +38,4 @@ export const reducer = (state, action) => {
     default:
       return state;
   }
-  console.log("at reducer", state);
 };

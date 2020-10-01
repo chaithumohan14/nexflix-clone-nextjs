@@ -26,9 +26,18 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 991.98px) {
+  .navbar {
+    padding: 10px 20px;
+    width: 95%;
+  }
+}
+
 @media screen and (max-width: 767.98px) {
   .navbar {
-    width: 90%;
+    width: 95%;
+    padding: 10px;
+    margin: 0 auto;
   }
 }
 
