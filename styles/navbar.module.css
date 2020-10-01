@@ -2,7 +2,7 @@
   height: 50px;
   width: 95%;
   background: transparent;
-  padding: 10px 30px;
+  padding: 10px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,4 +24,19 @@
   font-weight: 500;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 767.98px) {
+  .navbar {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .navbar {
+    width: 80%;
+  }
+  .brand__logo {
+    width: 100px;
+  }
 }

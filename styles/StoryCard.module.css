@@ -1,0 +1,92 @@
+.storycard {
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 400px;
+  width: 100%;
+  border-top: 10px solid #555;
+  padding: 10px;
+}
+
+.img {
+  height: 300px;
+}
+
+.img img {
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  font-size: 40px;
+  width: 400px;
+  margin: 20px 0;
+}
+
+.subtitle {
+  font-size: 25px;
+  width: 450px;
+  margin: 20px 0;
+}
+
+.order_2 {
+  order: 2;
+}
+
+.order_1 {
+  order: 1;
+}
+
+@media screen and (max-width: 991.98px) {
+  .storycard {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding-bottom: 50px;
+  }
+  .title {
+    font-size: 35px;
+    width: 90%;
+    text-align: center;
+  }
+  .subtitle {
+    font-size: 20px;
+    width: 95%;
+    text-align: center;
+  }
+  .order_1 {
+    order: 2;
+  }
+  .order_2 {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .title {
+    font-size: 30px;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .title {
+    font-size: 25px;
+    width: 85%;
+    margin: 30px auto;
+  }
+  .subtitle {
+    font-size: 16px;
+    width: 90%;
+    margin: 10px auto;
+  }
+  .img {
+    height: 200px;
+  }
+}
