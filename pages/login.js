@@ -5,6 +5,7 @@ import { Store } from "../_context";
 import { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
+
 function login() {
   const router = useRouter();
   const [email, setEmail] = useState("");
