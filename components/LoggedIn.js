@@ -63,9 +63,6 @@ function LoggedIn() {
           murderous...
         </div>
       </div>
-      {/* {Object.keys(data).map((key) => {
-        return <CardRow key={key} title={key} datas={data[key]} />;
-      })} */}
       <CardRow key={"Originals"} title={"Originals"} datas={originals} />
       <CardRow key={"Trending"} title={"Trending"} datas={trending} />
       <CardRow key={"topRated"} title={"top Rated"} datas={topRated} />
