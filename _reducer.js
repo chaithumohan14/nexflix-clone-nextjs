@@ -1,4 +1,7 @@
-export const initialState = { user: null };
+export const initialState = {
+  user: null,
+  signupform: { email: null, password: null },
+};
 
 export const reducer = (state, action) => {
   switch (action.type) {
@@ -14,7 +17,26 @@ export const reducer = (state, action) => {
         user: null,
       };
 
+    case "SET_SIGNUP_EMAIL":
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          email: action.email,
+        },
+      };
+
+    case "SET_SIGNUP_PASSWORD":
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          password: action.password,
+        },
+      };
+
     default:
       return state;
   }
+  console.log("at reducer", state);
 };

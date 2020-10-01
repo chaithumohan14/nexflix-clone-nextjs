@@ -11,6 +11,20 @@
   background-size: cover;
 }
 
+.alert {
+  background-color: #ee291bcc;
+  color: white;
+  width: 80%;
+  padding: 10px 20px;
+  text-align: center;
+  margin: 20px auto;
+  display: none;
+}
+
+.showAlert {
+  display: block;
+}
+
 .form {
   width: 500px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -34,7 +48,7 @@
 .input__field {
   background-color: rgba(49, 45, 45, 0.849);
   position: relative;
-  width: 300px;
+  width: 400px;
   height: 55px;
   margin: 30px auto;
   overflow: hidden;
@@ -70,23 +84,54 @@
   top: 5px;
   font-size: 14px;
   left: 10px;
-  transition: all 0.35s ease-in;
+  transition: all 0.05s ease-in;
+  color: rgb(187, 172, 172);
 }
 
 .input__field input:placeholder-shown + label span {
   top: 25px;
   font-size: 16px;
+  color: rgb(187, 172, 172);
+}
+
+.input__field input:focus,
+.input__field input:valid,
+.input__field input:invalid {
+  box-shadow: none;
 }
 
 .btn {
   border: none;
   outline: none;
   background: #e50914;
-  padding: 20px;
-  width: 300px;
+  padding: 10px 20px;
+  width: 400px;
   color: white;
   font-size: 18px;
   font-weight: 600;
   font-family: "Roboto", sans-serif;
   border-radius: 2px;
+  height: 60px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .login__page {
+    background: black;
+  }
+  .form {
+    width: 100%;
+    align-items: center;
+    padding: 20px 10px;
+  }
+  .title {
+    align-self: center;
+  }
+  .form * {
+    width: 95%;
+    margin: 0px 0;
+  }
+  .input__field,
+  .btn {
+    margin: 20px 0;
+  }
 }

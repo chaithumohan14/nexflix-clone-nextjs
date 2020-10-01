@@ -34,9 +34,14 @@
 
 @media screen and (max-width: 575.98px) {
   .navbar {
-    width: 80%;
+    width: 95%;
+    padding: 10px;
   }
   .brand__logo {
     width: 100px;
+  }
+  .btn {
+    font-size: 16px;
+    font-weight: 600;
   }
 }

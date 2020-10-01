@@ -5,7 +5,7 @@ import { useState } from "react";
 function FaqItem({ question, answers }) {
   const [open, setOpen] = useState(false);
   return (
-    <div class={`${styles.faqitem} ${open ? styles.open : ""} `}>
+    <div className={`${styles.faqitem} ${open ? styles.open : ""} `}>
       <div className={`${styles.question}`}>
         <div>{question}</div>
         <div
@@ -18,8 +18,8 @@ function FaqItem({ question, answers }) {
         </div>
       </div>
       <div className={`${styles.answers}`}>
-        {answers.map((answer) => (
-          <div className={`${styles.answer}`}>
+        {answers.map((answer, index) => (
+          <div key={`${index}${question}`} className={`${styles.answer}`}>
             {answer}
             <br />
           </div>
