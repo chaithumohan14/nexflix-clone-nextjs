@@ -10,6 +10,7 @@ function Page({ children }) {
           email: auth.currentUser.email,
           displayName: auth.currentUser.displayName,
         };
+        console.log("from page", user);
         dispatch({
           type: "SET_USER",
           user: user,
