@@ -3,8 +3,6 @@ import styles from "../styles/loggedin.module.css";
 import Page from "./Page";
 import CardRow from "./CardRow/CardRow";
 function LoggedIn({ data }) {
-  console.log(data, "from logged in");
-
   return (
     <Page>
       <div className={`${styles.hero__page}`}>

@@ -22,7 +22,6 @@ function index({ data }) {
 }
 
 export async function getServerSideProps() {
-  console.log("Server Side");
   const getData = async (url) => {
     let resp = null;
     await fetch(`${URL}${url}`)
